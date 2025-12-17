@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Health Data Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Health-focused teal/blue palette */
+    --background: 200 20% 98%;
+    --foreground: 210 40% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 14%;
+
+    /* Primary: Medical Teal */
+    --primary: 174 62% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft Blue */
+    --secondary: 200 30% 94%;
+    --secondary-foreground: 210 40% 14%;
+
+    --muted: 200 20% 94%;
+    --muted-foreground: 210 15% 45%;
+
+    /* Accent: Warm coral for highlights */
+    --accent: 12 76% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 174 62% 38%;
+
+    --radius: 0.75rem;
+
+    /* Chart colors */
+    --chart-1: 174 62% 38%;
+    --chart-2: 200 80% 50%;
+    --chart-3: 12 76% 61%;
+    --chart-4: 262 52% 55%;
+    --chart-5: 45 93% 47%;
+
+    /* Dashboard specific */
+    --kpi-bg: 174 62% 95%;
+    --kpi-border: 174 62% 80%;
+    --success: 142 71% 45%;
+    --warning: 45 93% 47%;
+    --danger: 0 72% 51%;
+
+    /* Sidebar */
+    --sidebar-background: 210 40% 14%;
+    --sidebar-foreground: 200 20% 94%;
+    --sidebar-primary: 174 62% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 35% 22%;
+    --sidebar-accent-foreground: 200 20% 94%;
+    --sidebar-border: 210 30% 25%;
+    --sidebar-ring: 174 62% 50%;
+  }
+
+  .dark {
+    --background: 210 40% 8%;
+    --foreground: 200 20% 94%;
+
+    --card: 210 35% 12%;
+    --card-foreground: 200 20% 94%;
+
+    --popover: 210 35% 12%;
+    --popover-foreground: 200 20% 94%;
+
+    --primary: 174 62% 50%;
+    --primary-foreground: 210 40% 8%;
+
+    --secondary: 210 30% 18%;
+    --secondary-foreground: 200 20% 94%;
+
+    --muted: 210 30% 18%;
+    --muted-foreground: 200 15% 60%;
+
+    --accent: 12 76% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 174 62% 50%;
+
+    --sidebar-background: 210 45% 6%;
+    --sidebar-foreground: 200 20% 94%;
+    --sidebar-primary: 174 62% 50%;
+    --sidebar-primary-foreground: 210 40% 8%;
+    --sidebar-accent: 210 35% 15%;
+    --sidebar-accent-foreground: 200 20% 94%;
+    --sidebar-border: 210 30% 15%;
+    --sidebar-ring: 174 62% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .dashboard-container {
+    @apply min-h-screen bg-background;
+  }
+
+  .kpi-card {
+    @apply rounded-xl border bg-card p-5 shadow-sm transition-all duration-300 hover:shadow-md;
+  }
+
+  .kpi-value {
+    @apply text-3xl font-bold text-foreground;
+  }
+
+  .kpi-label {
+    @apply text-sm font-medium text-muted-foreground;
+  }
+
+  .chart-card {
+    @apply rounded-xl border bg-card p-6 shadow-sm;
+  }
+
+  .chart-title {
+    @apply text-lg font-semibold text-foreground mb-4;
+  }
+
+  .filter-section {
+    @apply bg-card rounded-xl border p-4 shadow-sm;
+  }
+
+  .filter-label {
+    @apply text-sm font-medium text-muted-foreground mb-2 block;
+  }
+
+  .stat-positive {
+    @apply text-success;
+  }
+
+  .stat-negative {
+    @apply text-danger;
+  }
+
+  .gradient-header {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(174 62% 28%) 100%);
+  }
+
+  .glass-effect {
+    @apply bg-card/80 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
