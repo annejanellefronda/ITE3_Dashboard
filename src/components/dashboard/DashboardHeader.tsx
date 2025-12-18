@@ -11,7 +11,7 @@ export const DashboardHeader = () => {
             </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
-                Diabetes & Diet Dashboard
+                Diabetes Prevalence & Diet Correlation
               </h1>
               <p className="text-primary-foreground/80 text-sm md:text-base mt-1">
                 Analyzing Regional Sugar Consumption vs. Diabetes Cases
