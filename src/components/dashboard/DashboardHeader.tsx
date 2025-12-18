@@ -18,14 +18,6 @@ export const DashboardHeader = () => {
               </p>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-sm text-primary-foreground/80">
-            <span className="px-3 py-1 bg-primary-foreground/10 rounded-full">
-              10,000+ Records
-            </span>
-            <span className="px-3 py-1 bg-primary-foreground/10 rounded-full">
-              21 Variables
-            </span>
-          </div>
         </div>
       </div>
     </header>

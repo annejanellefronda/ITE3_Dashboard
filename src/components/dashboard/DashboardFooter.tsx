@@ -10,7 +10,7 @@ export const DashboardFooter = () => {
             <span className="text-sm">
               <strong>Data Source:</strong>{' '}
               <a
-                href="https://www.kaggle.com/datasets"
+                href="https://www.kaggle.com/datasets/ak0212/global-sugar-consumption-trends-19602023"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline inline-flex items-center gap-1"
@@ -24,10 +24,10 @@ export const DashboardFooter = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               <Info className="h-4 w-4" />
-              <span>Dashboard for Educational Purposes</span>
+              <span>ITE3-M Dashboard</span>
             </div>
             <span className="text-muted-foreground/50">|</span>
-            <span>© 2024 Health Data Analysis Project</span>
+            <span>© 2025 Health Data Analysis Project</span>
           </div>
         </div>
         
