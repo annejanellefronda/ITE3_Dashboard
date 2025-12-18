@@ -24,10 +24,11 @@ export const DashboardFooter = () => {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               <Info className="h-4 w-4" />
-              <span>ITE3-M Dashboard</span>
             </div>
+            <span>Student: Anne Janelle Fronda</span>
+            <span>Instructor: Engr. Val Patrick Fabregas, MTA</span>
             <span className="text-muted-foreground/50">|</span>
-            <span>© 2025 Health Data Analysis Project</span>
+            <span>© 2025 Health Informatics Project</span>
           </div>
         </div>
         
