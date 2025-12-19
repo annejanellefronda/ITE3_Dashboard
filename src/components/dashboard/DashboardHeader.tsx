@@ -14,7 +14,7 @@ export const DashboardHeader = () => {
                 Diabetes Prevalence & Diet Correlation
               </h1>
               <p className="text-primary-foreground/80 text-sm md:text-base mt-1">
-                Analyzing Regional Sugar Consumption vs. Diabetes Cases
+                Analyzing Regional Sugar Consumption Data vs. Diabetes Cases
               </p>
             </div>
           </div>
